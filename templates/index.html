@@ -1,0 +1,65 @@
+{% extends '_layout.html' %}
+
+{% block body %}
+  <section id="about">
+    <h2>Kozea</h2>
+    <p class="intro">
+      Kozea group a été fondée en 2007 avec la volonté de se positionner comme un expert du web pour les acteurs de santé.
+    </p>
+  </section>
+
+  <section id="activity">
+    <h2>Notre activité</h2>
+    <p class="intro">
+      Kozea group se compose de quatre structures au service de la santé.
+    </p>
+    <dl id="structures">
+      <dt id="platform">Kozea Platform</dt>
+      <dd><a href="{{ url_for('page', page='activity') }}#platform">Plateformes digitales pour les acteurs de santé</a></dd>
+      <dt id="link">Kozea Link</dt>
+      <dd><a href="{{ url_for('page', page='activity') }}#link">Conseil et services aux acteurs de santé</a></dd>
+      <dt id="media">Kozea Media</dt>
+      <dd><a href="{{ url_for('page', page='activity') }}#media">Régie publicitaire pour Kozea Platform</a></dd>
+      <dt id="community">Kozea Community</dt>
+      <dd><a href="{{ url_for('page', page='activity') }}#community">Logiciels libres de l'équipe de Kozea</a></dd>
+    </dl>
+  </section>
+
+  <section id="news">
+    <h2>Nos actualités</h2>
+    <p class="intro">
+      Kozea group est aussi présent ailleurs que sur le web, et parfois on
+      parle même de nous.
+    </p>
+    <ul class="links">
+      <li>
+        <a href="#">Communiqués de presse</a>
+      </li>
+      <li>
+        <a href="#">Télécharger notre brochure</a>
+      </li>
+    </ul>
+    {# TODO links #}
+  </section>
+
+  <section id="partners">
+    <h2>Nos partenariats</h2>
+    <p class="intro">
+      Kozea groupe collabore au sein de plusieurs associations spécialisées dans le web et dans la e-santé.
+    </p>
+    <ul>
+      <li id="france-ehealth-tech"><a href="http://www.france-ehealthtech.org/">France eHealth Tech</a></li>
+      <li id="la-cuisine-du-web"><a href="http://www.lacuisineduweb.com">La cuisine du Web</a></li>
+      <li id="minalogic"><a href="http://www.minalogic.com/">Minalogic</a></li>
+      <li id="i-care"><a href="http://i-carecluster.org/">i-Care</a></li>
+    </ul>
+  </section>
+
+  <section id="follow">
+    <h2>Suivez nous</h2>
+    <ul class="links">
+      <li><a href="{{ url_for('page', page='about') }} ">À propos</a></li>
+    </ul>
+    {# TODO images #}
+  </section>
+{% endblock body %}

@@ -1,0 +1,1489 @@
+@import "https://fonts.googleapis.com/css?family=Hind:400,300,500,600,700)";
+
+*{
+  color: $text;
+  font-family: 'Hind', sans-serif;
+  outline: none;
+}
+
+h1 {
+  color: $h1;
+  font-size: 1em;
+  font-weight: 100;
+  margin-top: 5%;
+
+  &:before {
+    content: '[ ';
+  }
+
+  &:after {
+    content: ' ]';
+  }
+}
+
+h2 {
+  color: $h2;
+  font-size: 2.5em;
+  margin: 0;
+  text-align: center;
+}
+
+h3 {
+  font-weight: 400;
+}
+
+
+
+a {
+  text-decoration: none;
+  transition: .5s;
+}
+
+ul {
+  padding-left: 0;
+
+  li {
+    list-style-type: none;
+  }
+}
+
+#satisfaction, #big-data, #skills ul, #digital, 
+#professionnals, #advice, #project, #advertisement, 
+#work, #free, #projects dl, #projects dd, 
+#numbers, #members > *, {
+  > * {
+    color: #fff;
+  }
+}
+
+nav, #satisfaction, #digital, #advice, #advertisement, #free, #group, #members h3 {
+  background: $primary;
+}
+
+#about ul ~ p, #backoffice, #develop, #skills, 
+#story > p:not(.intro), #pharminfo, #medsite, 
+#backflip, #solutions, #projects + #expert, #contact-us form {
+  background: $secondary;
+}
+
+#work, #numbers #media, #targets {
+  background: $media;
+}
+
+#project, #numbers #link, #reactivity {
+  background: $link;
+}
+
+#professionnals, #numbers #platform, #innovation {
+  background: $platform;
+}
+
+#radicale,#numbers #community, #r-and-d {
+  background: $community;
+}
+
+#pygal {
+  background: lighten($community, 10%);
+}
+
+#weasyprint {
+  background: darken($community, 10%);
+}
+
+
+#platform, #link, #media, #community {
+  h2 {
+    font-size: 8em;
+    opacity: 0.15;
+  }
+}
+
+#teepy, #share {
+  background: darken($secondary,3%);
+}
+
+#projects {
+  h3 {
+    display: none;
+  }
+}
+
+#missions, #platform, #link, #media, #community {
+  section {
+    padding: 30px;
+  }
+}
+
+/* HTML */
+html {
+  background: url(images/kozea-line.jpg)no-repeat bottom;
+  background-size: contain;
+
+
+  body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    header {
+      display: flex;
+      justify-content: center;
+    }
+
+    &#index {
+      header {
+        background: $primary;
+        height: 94.7vh;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: flex-end;
+        position: relative;
+        
+        &:after {
+          content: '';
+          background: url(images/kozea-line.jpg) no-repeat bottom;
+          background-size: cover;
+          width: 100%;
+          height: 3px;
+        }
+
+        h1 {
+          color: transparent;
+          margin: 0;
+
+          &:before {
+            content: url(images/logos/logo-icon.svg);
+            display: block;
+            width: 130px;
+            position: absolute;
+            left: calc(50% - 65px);
+            top: calc(50% - 65px);
+          }
+        }
+      }
+    }
+
+    nav {
+      order: -1;
+
+      ul {
+        display: flex;
+        justify-content: flex-end;
+        max-width: 1200px;
+        margin: auto;
+        flex-wrap: wrap;
+        position: relative;
+
+        li {
+          padding: 15px 10px;
+          font-size: .9em;
+
+          a {
+            color: #fff;
+          }
+
+          &:first-child {
+            a:before {
+              position: absolute;
+              content: '';
+              background: url(images/logos/logo-kozeagroup.svg)no-repeat left;
+              left: 0;
+              top: 4px;
+              width: 130px; 
+              height: 47px;
+            }
+
+            &:hover a:before {
+              opacity: 0.8;
+            }
+          }
+        }
+      }
+    }
+
+    nav + section {
+      margin-top: 0;
+    }
+
+    > section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 5% auto;
+      max-width: 1200px;
+      width: 100%;
+  
+      p, li {
+        font-size: 1.2em;
+        font-weight: 100;
+
+        &.intro {
+          font-size: 1.6em;
+          text-align: center;
+          margin: 0 auto 30px;
+          width: 70%  
+        }
+      }
+    }
+
+
+    #about, #pharminfo, #medsite, #teepy, #backflip, #follow {
+      .links a {
+        font-size: 0.85em;
+        color: $a;
+
+        &:before, &:after {
+          opacity: 0;
+          transition: transform 0.35s, opacity 0.2s;
+          display: inline-block;
+        }
+
+        &:before {
+          content: '[ ';
+          transform: translateX(20px);
+          margin-right: 5px;
+        }
+
+        &:after {
+          content: ' ]';
+          transform: translateX(-20px);
+          margin-left: 5px;
+        }
+
+        &:hover {
+          &:before, &:after {
+            opacity: 1;
+            transform: translateX(0px);
+          }
+        }
+      }
+    }
+
+    #news {
+      display: flex;
+
+      ul {
+        width: 100%;
+        display: flex;
+
+        li {
+          box-sizing: border-box;
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          flex-direction: column;
+          padding: 30px;
+          position: relative;
+
+          a {
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: 700;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+  
+            &:before {
+              display: block;
+              order: -2;
+            }
+            
+            &:after  {
+              display: block;
+              background: #fff;
+              content: '';
+              height: 3px;
+              margin: 10px 0 20px;
+              order: -1;
+              width: 20px;
+            }
+          }
+
+          &:after {
+            background: rgba($primary,0.6);
+            content: '';
+            height: 250px;
+            left: 25px;
+            opacity: 0;
+            position: absolute;
+            top: 25px;
+            transform: scale(0);
+            transition: opacity 0.35s, transform 0.35s;
+            width: 250px;
+            z-index: -1;
+          }
+
+
+          &:first-child {
+            background: url(images/photos/press-bkgd.jpg)no-repeat;
+            width: 50%;
+            height: 400px;
+            background-size: cover;
+
+            a:before {
+              content: url(images/icones/press.svg); 
+              width: 100px;
+            }
+          }
+
+          &:nth-of-type(2) {
+            background: url(images/photos/brochure-bkgd.jpg)no-repeat;
+            width: 33%;
+            height: 200px;
+            background-size: cover;
+
+            a:before {
+              content: url(images/icones/brochure.svg);
+              width: 40px;
+            }
+          }
+        }
+      }
+    }
+
+    &#index {
+      #activity {
+        dl {
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+
+          dt {
+            display: none;
+
+            &#platform + dd {
+              background: url(images/photos/platform-nb.jpg);
+
+              a {
+                background: $platform;
+                
+                &:before {
+                  content: url(images/logos/kozea-platform-white.svg);
+                }
+              }
+            }
+
+            &#link + dd {
+              background: url(images/photos/link-nb.jpg);
+
+              a {
+                background: $link;
+                
+                &:before {
+                  content: url(images/logos/kozea-link-white.svg);
+                }
+              }
+            }
+
+            &#media + dd {
+              background: url(images/photos/media-nb.jpg);
+
+              a {
+                background: $media;
+                
+                &:before {
+                  content: url(images/logos/kozea-media-white.svg);
+                }
+              }
+            }
+
+            &#community + dd {
+              background: url(images/photos/community-nb.jpg);
+
+              a {
+                background: $community;
+                
+                &:before {
+                  content: url(images/logos/kozea-community-white.svg);
+                }
+              }
+            }
+          }
+
+          dd {
+            margin: 0;
+            width: 50%;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            a {
+              width: 250px;
+              color: #fff;
+              font-weight: 700;
+              padding: 25px;
+              opacity: 0;
+              transform: scale(0);
+              transition: opacity 0.35s, transform 0.35s;
+
+
+              &:before {
+                display: block;
+                width: 125px;
+              }
+            }
+
+            &:hover a {
+              opacity: 1;
+              transform: scale(1);
+            }
+          }
+        }
+      }
+    }
+
+    /*about*/
+    &#about {
+      #numbers, #members, #tools {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      #numbers li, #members h3, #tools li {
+        text-transform: uppercase;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+
+        strong {
+          position: relative;
+
+          span {
+            color: #fff;
+            font-size: 6em;
+            display: flex;
+            justify-content: center;
+          }
+
+          &:before {
+            content: '';
+            position: absolute;
+            left: 140px;
+            background: #fff;
+            width: 20px;
+            height: 3px;
+            display: block;
+            bottom: 50px;
+          }
+        }
+      }
+
+      #numbers li, #members h3 {
+        strong {
+          color: #fff;
+        }
+      }
+
+      #numbers li, #tools li {
+        width: 300px;
+        height: 300px;
+      }
+
+      #story {
+        blockquote {
+          background: red;
+          width: 75%;
+          height: 450px;
+          align-self: flex-end;
+          margin: 0;
+          padding: 30px;
+          box-sizing: border-box;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+
+          & + p, & + p + p {
+            align-self: flex-end;
+            width: 50%;
+            padding: 30px;
+            box-sizing: border-box;
+            margin: 0;
+
+            & + p {
+              padding-top: 0;
+            }
+          }
+        }
+
+
+
+        #numbers {
+          margin: 0;
+          li {
+            &:first-child {
+              //margin-left: 300px;
+            }
+          }
+        }
+      }
+
+      #members {
+        margin: auto;
+
+        h3 {
+          font-weight: 100;
+          color: #fff;
+        }
+
+        > * {
+          width: 300px;
+          height: 300px;
+          margin: 0;
+        }
+
+        section {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          position: relative;
+
+          &:after {
+            background: rgba($primary,0.6);
+            content: '';
+            height: 250px;
+            left: 25px;
+            opacity: 0;
+            position: absolute;
+            top: 25px;
+            transform: scale(0);
+            transition: opacity 0.35s, transform 0.35s;
+            width: 250px;
+            z-index: -1;
+          }
+
+          h4,p {
+            opacity: 0;
+            padding: 0 12%;
+            transform: scale(0);
+            transition: opacity 0.35s, transform 0.35s;
+          }
+
+          h4 {
+            font-size: 1.2em;
+            font-weight: 400;
+            line-height: 2.2em;
+            margin: 0;
+
+            &:after {
+              background: #fff;
+              content: '';
+              display: block;
+              height: 2px;
+              width: 25px;
+            }
+          }
+
+          p {
+            font-size: 1em;
+            font-style: italic;
+            line-height: 1.2em;
+            padding-bottom: 20px;
+          }
+
+          img {
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 300px;
+            z-index: -1;
+          }
+
+          &:hover, &:focus {
+            &:after,h4,p {
+              opacity: 1;
+              transform: scale(1);
+            }
+          }
+
+          @media screen and (min-width: 1200px) {
+            &:nth-of-type(2), &:nth-of-type(3), &:nth-of-type(14), {
+              padding-right: 300px;
+            }
+
+            &:nth-of-type(10), &:nth-of-type(11) {
+              margin-left: 300px;
+            }
+
+            &:nth-of-type(10),&:nth-of-type(3), &:nth-of-type(14) {
+              &:before {
+                content: '';
+                height: 300px;
+                position: absolute;
+                width: 300px;
+              }
+            }
+
+            &:nth-of-type(10):before {
+              background: $primary;
+              left: -300px;
+              top: 0;
+            }
+
+            &:nth-of-type(3), &:nth-of-type(14) {
+              &:before {
+                background: lighten($primary,25%);
+                right: 0;
+                top: 0;
+              }
+            }
+
+            &:nth-of-type(14):before {
+              background: $primary;
+            } 
+          }
+        }
+      } 
+
+      #tools {
+        justify-content: flex-end;
+
+        h3 {
+          display: none;
+        }
+
+        ul {
+          width: 50%;
+          display: flex;
+          flex-wrap: wrap;
+          margin: 0;
+          
+          li {
+            box-shadow: 1px 1px 0px $border;
+            border-left: 1px solid $border;
+            box-sizing: border-box;
+
+            &:nth-child(-n+2) {
+              border-top: 1px solid $border;
+            }
+
+            &#soda {
+              background: url(images/icones/soda.svg)no-repeat center 40px;
+              background-size: 30%;
+            }
+
+            &#sport {
+              background: url(images/icones/sport.svg)no-repeat center 40px;
+              background-size: 30%;
+            }
+
+            &#babyfoot {
+              background: url(images/icones/babyfoot.svg)no-repeat center 40px;
+              background-size: 30%;
+            }
+
+            &#popcorn {
+              background: url(images/icones/popcorn.svg)no-repeat center 40px;
+              background-size: 30%;
+            }
+
+            strong {
+              margin-top: 120px;
+
+              &:before {
+                background: $text;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &#activity {
+      #digital, #pharminfo, #medsite, #backflip, #advertisement, #solutions, #expert {
+        width: 50%;
+      }
+
+      #digital, #professionnals, #advice, #project, #work, #free, #share {
+        width: 33%;
+      }
+
+      #teepy {
+        width: 25%;
+      }
+
+      #pharminfo, #medsite, #teepy, #backflip {
+        h3 {
+          font-size: 0;
+
+          &:before {
+            display: block;
+            content: '';
+          }
+        }
+      }
+
+      section {
+        box-sizing: border-box;
+
+        &#platform {
+          margin-top: 0;
+        }
+      }
+
+      #platform {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        position: relative;
+
+        h2 {
+          position: absolute;
+          top: 230px;
+          right: -40px;
+          z-index: -1;
+        }
+
+        &:before {
+          content: url(images/photos/platform.jpg);
+          position: absolute;
+          top: 0;
+          left: 25%;
+          z-index: -2;
+        }
+
+        #digital {
+          order: -2;
+          margin-left: 17%;
+          margin-top: 150px;
+          position: relative;
+
+          &:before {
+            content: url(images/logos/kozea-platform.svg);
+            width: 150px;
+            display: block;
+            position: absolute;
+            top: -70px;
+            left: -65px;
+          }
+
+        }
+
+        #pharminfo {
+          margin-left: 50%;
+          margin-top: -150px;
+
+          h3:before {
+            background: url(images/logos/logo-pharminfo.svg)no-repeat;
+            height: 50px;
+          }
+        }
+
+        #medsite h3:before {
+          background: url(images/logos/medsite.svg)no-repeat;
+          height: 30px;
+        }
+
+        #professionnals {
+          margin-right: 17%;
+          align-self: flex-start;
+        }
+
+        #teepy {
+          margin-left: 25%;
+
+          h3:before {
+            background: red;
+            height: 50px;
+          }
+        }
+      }
+
+      #link {
+        position: relative;
+
+        h2 {
+          position:absolute;
+          top: -120px;
+          left: -70px;
+        }
+
+        #advice {
+          align-self: flex-start;
+          margin-left: 17%;
+          position: relative;
+
+          &:before {
+            content: url(images/logos/kozea-link.svg);
+            width: 150px;
+            display: block;
+            position: absolute;
+            top: -140px;
+            right: -160px;
+          }
+
+          &:after {
+            content: url(images/photos/link.jpg);
+            position: absolute;
+            z-index: -1;
+            top: -70px;
+            left: 100%;
+          }
+        }
+
+        #project {
+          align-self: flex-end;
+          margin-right: 17%;
+        }
+
+        #backflip {
+          align-self: flex-start;
+          margin-top: -267px;
+
+          h3:before {
+            background: red;
+            height: 50px;
+          }
+        }
+      }
+
+      #media {
+        position: relative;
+        margin-top: 12%;
+
+        h2 {
+          position:absolute;
+          z-index: -2;
+          top: -130px;
+          right: 0;
+        }
+
+        #advertisement {
+          align-self: flex-end;
+          position: relative;
+
+          &:after {
+            content: url(images/photos/media.jpg);
+            position: absolute;
+            top: -120px;
+            left: -67%;
+            z-index: -2;
+          }
+        }
+
+        #work {
+          margin-left: 33%;
+          p strong {
+            color: #fff;
+          }
+        }
+
+        #solutions {
+          align-self: flex-start;
+          margin-top: -315px;
+        }
+      }
+
+      #community {
+        align-items: flex-start;
+        position: relative;
+        margin-top: 8%;
+
+        h2 {
+          position: absolute;
+          top: -90px;
+          right: 0;
+          z-index: -2;
+        }
+
+        #free {
+          margin-left: 17%;
+          position: relative;
+
+          &:before {
+            content: url(images/logos/kozea-community.svg);
+            width: 150px;
+            position: absolute;
+            top: -70px;
+            left: 0;
+          }
+
+          &:after {
+            content: url(images/photos/community.jpg);
+            position: absolute;
+            z-index: -1;
+            top: 30px;
+            left: 87%;
+          }
+        }
+
+        #projects {
+          padding: 0;
+          margin-left: 25%;
+
+          ul {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0;
+
+            li {
+              a {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 300px;
+                height: 300px;
+                color: #fff;
+                padding: 5%;
+                box-sizing: border-box;
+                text-align: center;
+                justify-content: center;
+
+                strong {
+                  text-transform: uppercase;
+                  color: #fff;
+                }
+
+                &:before {
+                  order: -2;
+                  width: 90px;
+                }
+
+                &:after {
+                  background: #fff;
+                  content: '';
+                  display: block;
+                  height: 3px;
+                  order: -1;
+                  margin: 10px;
+                  width: 20px;
+                }
+              }
+
+              &#radicale a:before {
+                content: url(images/icones/radicale.svg);
+              }
+
+              &#pygal a:before {
+                content: url(images/icones/pygal.svg);
+              }
+
+              &#weasyprint a:before {
+                content: url(images/icones/weasyprint.svg);
+              }
+            }
+          }
+        }
+
+        #share {
+          margin-left: 50%;
+          margin-top: -15%;
+        }
+      }
+    }
+
+    #skills {
+      max-width: inherit;
+      margin: 10% auto 0;
+      padding-bottom: 5%;
+
+      h2 {
+        margin-top: -10%;
+      }
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: 600px;
+        padding-left: 0;
+
+        li {
+          align-items: center;
+          box-sizing: border-box;
+          display: flex;
+          flex-direction: column;
+          height: 270px;
+          padding: 20px 10px;
+          text-align: center;
+          width: 50%;
+
+          &:after {
+            background: #fff;
+            content: '';
+            height: 3px;
+            margin: 10px 0 20px;
+            order: -1;
+            width: 20px;
+          }
+
+          &:nth-of-type(3) {
+            margin-top: 60px;
+          }
+
+          &:before {
+            order: -2;
+            width: 90px;
+          }
+
+          &#targets:before {
+            content: url(images/icones/target.svg);
+          }
+
+          &#reactivity:before {
+            content: url(images/icones/reactivity.svg);
+          }
+
+          &#innovation:before{
+            content: url(images/icones/idea.svg);
+          }
+
+          &#r-and-d:before{
+            content: url(images/icones/search.svg);
+          }
+        }
+      }
+    }
+  
+    #goals {
+      ul {
+        display: flex;
+        width: 100%;
+
+        li {
+          align-items: center;
+          display: flex;
+          flex: 1 33%;
+          flex-direction: column;
+          text-align: center;
+
+          &:after {
+            background: $primary;
+            content: '';
+            display: block;
+            height: 3px;
+            order: -1;
+            margin: 10px;
+            width: 20px;
+          }
+
+          &:before {
+            order: -2;
+            width: 90px;
+          }
+
+          &#specialist:before {
+            content: url(images/icones/specialist.svg);
+          }
+
+          &#web-expert:before {
+            content: url(images/icones/webexpert.svg);
+          }
+
+          &#create-solutions:before {
+            content: url(images/icones/solutions.svg);
+          }
+        }
+      }
+    }
+
+    &#expertise {
+      #missions {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+
+        h2 {
+          flex: 1 100%;
+        }
+
+        section {
+          width: 50%;
+          box-sizing: border-box;
+
+          &:first-of-type {
+            position: relative;
+            margin-right: 50%;
+
+            &:after {
+              content: '';
+              display: block;
+              background: $primary;
+              height: 3px;
+              width: 60px;
+              position: absolute;
+              top: 60px;
+              right: -30px;
+            }
+
+            img {
+              position: absolute;
+              top: 0;
+              right: -300px;
+              width: 250px;
+            }
+          }
+
+          &:nth-of-type(2) {
+            margin-top: -90px;
+            margin-left: 50%;
+          }
+
+          &:nth-of-type(3){
+            width: 100%;
+            margin-right: 50%;
+            position: relative;
+
+            &:after {
+              content: '';
+              height: 100%;
+              position: absolute;
+              width: 100%;
+              background: url(images/photos/brainstorm.jpg)no-repeat;
+              right: -100%;
+              top: 0;
+            }
+          }
+
+          &#big-data {
+            background: url(images/photos/big-data.jpg)no-repeat;
+            background-size: cover;
+            text-align: center;
+          }
+        }
+      }
+    }
+
+    &#legal {
+      h1 {
+        &:before {
+          content: '[ Mentions légales ]';
+        }
+
+        &:after {
+          content: none;
+        }
+      }
+      dl {
+        dt, dd {
+          display: inline;
+        }
+
+        dt {
+          font-weight: 700;
+
+          &:after {
+            content: ':';
+            display: inline;
+          }
+        }
+
+        dd {
+          margin-left: 0;
+
+          &:after {
+            content: '';
+            display: block;
+          }
+        }
+      }
+    }
+
+    #partners {
+      ul {
+        display: flex;
+        width: 100%;
+
+        li {
+          flex: 1 25%;
+          text-align: center;
+
+          a {
+            height: 100px;
+            display: block;
+            font-size: 0;
+          }
+
+          &#france-ehealth-tech a {
+            background: url(images/marques/france-ehealth.jpg)no-repeat center center;
+          }
+
+          &#la-cuisine-du-web a {
+            background: url(images/marques/cuisineduweb.jpg)no-repeat center center;
+          }
+
+          &#minalogic a {
+            background: url(images/marques/minalogic.jpg)no-repeat center center;
+          }
+
+          &#i-care a {
+            background: url(images/marques/i-care.jpg)no-repeat center center;
+          }
+        }
+      }
+    }
+
+    &#references, #partners {
+      ul li a {
+        opacity: 0.75;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+
+    &#references {
+      section {
+        ul {
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+
+          li {
+            padding: 40px 20px;
+            box-sizing: border-box;
+            width: 25%;
+            box-shadow: 1px 0px 0px $border;
+            border-left: 1px solid $border;
+
+            a {
+              height: 100px;
+              display: block;
+              font-size: 0;
+            }
+
+            &#arrow a {
+              background: url(images/marques/arrow.jpg)no-repeat center center;
+            }
+
+            &#novartis a {
+              background: url(images/marques/novartis.jpg)no-repeat center center;
+            }
+            
+            &#bailly a {
+              background: url(images/marques/bailly-creat.jpg)no-repeat center center;
+            }
+            
+            &#septodont a {
+              background: url(images/marques/septodont.jpg)no-repeat center center;
+            }
+            
+            &#sanofi a {
+              background: url(images/marques/sanofi.jpg)no-repeat center center;
+            }
+            
+            &#mylan a {
+              background: url(images/marques/mylan.jpg)no-repeat center center;
+            }
+            
+            &#safran a {
+              background: url(images/marques/safran.jpg)no-repeat center center;
+            }
+            
+            &#lafarge a {
+              background: url(images/marques/lafarge.jpg)no-repeat center center;
+            }
+            
+            &#airbus-helicopters a {
+              background: url(images/marques/airbus.jpg)no-repeat center center;
+            }
+
+            &#safetynetwork a {
+              background: url(images/marques/safety-network.jpg)no-repeat center center;
+            }
+          }
+        }
+      }
+    }
+
+    #contact-us {
+      > dl {
+        background: $primary;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0;
+        padding: 20px;
+        margin-right: 33%;
+        box-sizing: border-box;
+        width: 33%;
+
+        > *{
+          color: #fff;
+        }
+
+        dt:first-child, dt:first-child + dd {
+          width: 60%;
+        }
+
+        dt:nth-of-type(2),dt:nth-of-type(2) + dd {
+          width: 40%;
+        }
+
+        ul {
+          margin: 0;
+
+          li {
+          font-size: 1em;
+
+            a {
+              color: #fff;
+            }
+          }
+        }
+
+        dd {
+          margin-left: 0;
+          font-weight: 100;
+        }
+
+        dt {
+          font-weight: 400;
+          order: -1;
+          padding-top: 10px;
+        }
+      }
+
+      form, #map {
+        width: 50%;
+      }
+
+      #map {
+        background: red;
+        height: 500px;
+        margin-right: 50%;
+        margin-top: -365px;
+        z-index: -10;
+      }
+
+      form {
+        border-top: 2px solid $primary;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        margin-left: 50%;
+        padding: 30px;
+        margin-top: -70px;
+
+        input:not(:last-child), textarea {
+          background: none;
+          border-top: none;
+          border-right: none;
+          border-bottom: 1px solid $border;
+          border-left: none;
+          margin-bottom: 20px;
+          padding: 5px 10px;
+
+          &[placeholder] {
+            color: $text;
+            font-size: 1em;
+            font-weight: 100;
+          }
+        }
+
+        textarea {
+          height: 120px;
+        }
+
+        input[type="submit"] {
+          background: $primary;
+          border: none;
+          box-shadow: none;
+          color: #fff;
+          font-size: 1em;
+          padding: 7px;
+          width: 20%;
+
+          &:hover {
+            background: lighten($primary,10%);
+          }
+        }
+      }
+    }   
+    
+    footer  {
+      margin-top: 25px;
+
+      dl {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0;
+        padding-bottom: 4px;
+
+        > * {
+          border-left: 1px solid $border;
+          box-sizing: border-box;
+          font-size: 0.8em;
+          padding-left: 1.5%;
+          width: 25%;
+
+          &:first-child, &:first-child + dd {
+            border-left: none;
+          }
+        }
+
+        dt {
+          color: #C1C8D0;
+          order: -1;
+          padding-top: 10px;
+        }
+
+        dd {
+          margin-left: 0;
+
+          &:nth-of-type(3) {
+            ul {
+              display: flex;
+              flex-wrap: wrap;
+
+              li {
+                width: 50%;
+              }
+            }
+          }
+
+          &:last-child ul {
+            display: flex;
+            
+            li:last-child {
+              &:before {
+                content: '- ';
+              }
+            }
+          }
+
+          ul {
+            margin-top: 0;
+
+            li a {
+              &:before, &:after {
+                opacity: 0;
+                transition: transform 0.35s, opacity 0.2s;
+                display: inline-block;
+              }
+
+              &:before {
+                content: '[ ';
+                transform: translateX(20px);
+                margin-right: 5px;
+              }
+
+              &:after {
+                content: ' ]';
+                transform: translateX(-20px);
+                margin-left: 5px;
+              }
+
+              &:hover {
+                color: $a;
+
+                &:before, &:after {
+                  opacity: 1;
+                  transform: translateX(0px);
+                }
+              }
+            }
+            
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,931 @@
+@charset "UTF-8";
+@import "https://fonts.googleapis.com/css?family=Hind:400,300,500,600,700)";
+* {
+  color: #1c1c1c;
+  font-family: 'Hind', sans-serif;
+  outline: none; }
+
+h1 {
+  color: #1c1c1c;
+  font-size: 1em;
+  font-weight: 100;
+  margin-top: 5%; }
+  h1:before {
+    content: '[ '; }
+  h1:after {
+    content: ' ]'; }
+
+h2 {
+  color: #1a2530;
+  font-size: 2.5em;
+  margin: 0;
+  text-align: center; }
+
+h3 {
+  font-weight: 400; }
+
+a {
+  text-decoration: none;
+  transition: .5s; }
+
+ul {
+  padding-left: 0; }
+  ul li {
+    list-style-type: none; }
+
+#satisfaction > *, #big-data > *, #skills ul > *, #digital > *,
+#professionnals > *, #advice > *, #project > *, #advertisement > *,
+#work > *, #free > *, #projects dl > *, #projects dd > *,
+#numbers > *, #members > * > * {
+  color: #fff; }
+
+nav, #satisfaction, #digital, #advice, #advertisement, #free, #group, #members h3 {
+  background: #1a2530; }
+
+#about ul ~ p, #backoffice, #develop, #skills,
+#story > p:not(.intro), #pharminfo, #medsite,
+#backflip, #solutions, #projects + #expert, #contact-us form {
+  background: #f9f9f9; }
+
+#work, #numbers #media, #targets {
+  background: #e53c4c; }
+
+#project, #numbers #link, #reactivity {
+  background: #f49a2f; }
+
+#professionnals, #numbers #platform, #innovation {
+  background: #007bb8; }
+
+#radicale, #numbers #community, #r-and-d {
+  background: #6e5f84; }
+
+#pygal {
+  background: #87789e; }
+
+#weasyprint {
+  background: #554a66; }
+
+#platform h2, #link h2, #media h2, #community h2 {
+  font-size: 8em;
+  opacity: 0.15; }
+
+#teepy, #share {
+  background: #f1f1f1; }
+
+#projects h3 {
+  display: none; }
+
+#missions section, #platform section, #link section, #media section, #community section {
+  padding: 30px; }
+
+/* HTML */
+html {
+  background: url(images/kozea-line.jpg) no-repeat bottom;
+  background-size: contain; }
+  html body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    /*about*/ }
+    html body header {
+      display: flex;
+      justify-content: center; }
+    html body#index header {
+      background: #1a2530;
+      height: 94.7vh;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: flex-end;
+      position: relative; }
+      html body#index header:after {
+        content: '';
+        background: url(images/kozea-line.jpg) no-repeat bottom;
+        background-size: cover;
+        width: 100%;
+        height: 3px; }
+      html body#index header h1 {
+        color: transparent;
+        margin: 0; }
+        html body#index header h1:before {
+          content: url(images/logos/logo-icon.svg);
+          display: block;
+          width: 130px;
+          position: absolute;
+          left: calc(50% - 65px);
+          top: calc(50% - 65px); }
+    html body nav {
+      order: -1; }
+      html body nav ul {
+        display: flex;
+        justify-content: flex-end;
+        max-width: 1200px;
+        margin: auto;
+        flex-wrap: wrap;
+        position: relative; }
+        html body nav ul li {
+          padding: 15px 10px;
+          font-size: .9em; }
+          html body nav ul li a {
+            color: #fff; }
+          html body nav ul li:first-child a:before {
+            position: absolute;
+            content: '';
+            background: url(images/logos/logo-kozeagroup.svg) no-repeat left;
+            left: 0;
+            top: 4px;
+            width: 130px;
+            height: 47px; }
+          html body nav ul li:first-child:hover a:before {
+            opacity: 0.8; }
+    html body nav + section {
+      margin-top: 0; }
+    html body > section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 5% auto;
+      max-width: 1200px;
+      width: 100%; }
+      html body > section p, html body > section li {
+        font-size: 1.2em;
+        font-weight: 100; }
+        html body > section p.intro, html body > section li.intro {
+          font-size: 1.6em;
+          text-align: center;
+          margin: 0 auto 30px;
+          width: 70%; }
+    html body #about .links a, html body #pharminfo .links a, html body #medsite .links a, html body #teepy .links a, html body #backflip .links a, html body #follow .links a {
+      font-size: 0.85em;
+      color: #69737c; }
+      html body #about .links a:before, html body #about .links a:after, html body #pharminfo .links a:before, html body #pharminfo .links a:after, html body #medsite .links a:before, html body #medsite .links a:after, html body #teepy .links a:before, html body #teepy .links a:after, html body #backflip .links a:before, html body #backflip .links a:after, html body #follow .links a:before, html body #follow .links a:after {
+        opacity: 0;
+        transition: transform 0.35s, opacity 0.2s;
+        display: inline-block; }
+      html body #about .links a:before, html body #pharminfo .links a:before, html body #medsite .links a:before, html body #teepy .links a:before, html body #backflip .links a:before, html body #follow .links a:before {
+        content: '[ ';
+        transform: translateX(20px);
+        margin-right: 5px; }
+      html body #about .links a:after, html body #pharminfo .links a:after, html body #medsite .links a:after, html body #teepy .links a:after, html body #backflip .links a:after, html body #follow .links a:after {
+        content: ' ]';
+        transform: translateX(-20px);
+        margin-left: 5px; }
+      html body #about .links a:hover:before, html body #about .links a:hover:after, html body #pharminfo .links a:hover:before, html body #pharminfo .links a:hover:after, html body #medsite .links a:hover:before, html body #medsite .links a:hover:after, html body #teepy .links a:hover:before, html body #teepy .links a:hover:after, html body #backflip .links a:hover:before, html body #backflip .links a:hover:after, html body #follow .links a:hover:before, html body #follow .links a:hover:after {
+        opacity: 1;
+        transform: translateX(0px); }
+    html body #news {
+      display: flex; }
+      html body #news ul {
+        width: 100%;
+        display: flex; }
+        html body #news ul li {
+          box-sizing: border-box;
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          flex-direction: column;
+          padding: 30px;
+          position: relative; }
+          html body #news ul li a {
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: 700;
+            display: flex;
+            flex-direction: column;
+            align-items: center; }
+            html body #news ul li a:before {
+              display: block;
+              order: -2; }
+            html body #news ul li a:after {
+              display: block;
+              background: #fff;
+              content: '';
+              height: 3px;
+              margin: 10px 0 20px;
+              order: -1;
+              width: 20px; }
+          html body #news ul li:after {
+            background: rgba(26, 37, 48, 0.6);
+            content: '';
+            height: 250px;
+            left: 25px;
+            opacity: 0;
+            position: absolute;
+            top: 25px;
+            transform: scale(0);
+            transition: opacity 0.35s, transform 0.35s;
+            width: 250px;
+            z-index: -1; }
+          html body #news ul li:first-child {
+            background: url(images/photos/press-bkgd.jpg) no-repeat;
+            width: 50%;
+            height: 400px;
+            background-size: cover; }
+            html body #news ul li:first-child a:before {
+              content: url(images/icones/press.svg);
+              width: 100px; }
+          html body #news ul li:nth-of-type(2) {
+            background: url(images/photos/brochure-bkgd.jpg) no-repeat;
+            width: 33%;
+            height: 200px;
+            background-size: cover; }
+            html body #news ul li:nth-of-type(2) a:before {
+              content: url(images/icones/brochure.svg);
+              width: 40px; }
+    html body#index #activity dl {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap; }
+      html body#index #activity dl dt {
+        display: none; }
+        html body#index #activity dl dt#platform + dd {
+          background: url(images/photos/platform-nb.jpg); }
+          html body#index #activity dl dt#platform + dd a {
+            background: #007bb8; }
+            html body#index #activity dl dt#platform + dd a:before {
+              content: url(images/logos/kozea-platform-white.svg); }
+        html body#index #activity dl dt#link + dd {
+          background: url(images/photos/link-nb.jpg); }
+          html body#index #activity dl dt#link + dd a {
+            background: #f49a2f; }
+            html body#index #activity dl dt#link + dd a:before {
+              content: url(images/logos/kozea-link-white.svg); }
+        html body#index #activity dl dt#media + dd {
+          background: url(images/photos/media-nb.jpg); }
+          html body#index #activity dl dt#media + dd a {
+            background: #e53c4c; }
+            html body#index #activity dl dt#media + dd a:before {
+              content: url(images/logos/kozea-media-white.svg); }
+        html body#index #activity dl dt#community + dd {
+          background: url(images/photos/community-nb.jpg); }
+          html body#index #activity dl dt#community + dd a {
+            background: #6e5f84; }
+            html body#index #activity dl dt#community + dd a:before {
+              content: url(images/logos/kozea-community-white.svg); }
+      html body#index #activity dl dd {
+        margin: 0;
+        width: 50%;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; }
+        html body#index #activity dl dd a {
+          width: 250px;
+          color: #fff;
+          font-weight: 700;
+          padding: 25px;
+          opacity: 0;
+          transform: scale(0);
+          transition: opacity 0.35s, transform 0.35s; }
+          html body#index #activity dl dd a:before {
+            display: block;
+            width: 125px; }
+        html body#index #activity dl dd:hover a {
+          opacity: 1;
+          transform: scale(1); }
+    html body#about #numbers, html body#about #members, html body#about #tools {
+      display: flex;
+      flex-wrap: wrap; }
+    html body#about #numbers li, html body#about #members h3, html body#about #tools li {
+      text-transform: uppercase;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center; }
+      html body#about #numbers li strong, html body#about #members h3 strong, html body#about #tools li strong {
+        position: relative; }
+        html body#about #numbers li strong span, html body#about #members h3 strong span, html body#about #tools li strong span {
+          color: #fff;
+          font-size: 6em;
+          display: flex;
+          justify-content: center; }
+        html body#about #numbers li strong:before, html body#about #members h3 strong:before, html body#about #tools li strong:before {
+          content: '';
+          position: absolute;
+          left: 140px;
+          background: #fff;
+          width: 20px;
+          height: 3px;
+          display: block;
+          bottom: 50px; }
+    html body#about #numbers li strong, html body#about #members h3 strong {
+      color: #fff; }
+    html body#about #numbers li, html body#about #tools li {
+      width: 300px;
+      height: 300px; }
+    html body#about #story blockquote {
+      background: red;
+      width: 75%;
+      height: 450px;
+      align-self: flex-end;
+      margin: 0;
+      padding: 30px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end; }
+      html body#about #story blockquote + p, html body#about #story blockquote + p + p {
+        align-self: flex-end;
+        width: 50%;
+        padding: 30px;
+        box-sizing: border-box;
+        margin: 0; }
+        html body#about #story blockquote + p + p, html body#about #story blockquote + p + p + p {
+          padding-top: 0; }
+    html body#about #story #numbers {
+      margin: 0; }
+    html body#about #members {
+      margin: auto; }
+      html body#about #members h3 {
+        font-weight: 100;
+        color: #fff; }
+      html body#about #members > * {
+        width: 300px;
+        height: 300px;
+        margin: 0; }
+      html body#about #members section {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        position: relative; }
+        html body#about #members section:after {
+          background: rgba(26, 37, 48, 0.6);
+          content: '';
+          height: 250px;
+          left: 25px;
+          opacity: 0;
+          position: absolute;
+          top: 25px;
+          transform: scale(0);
+          transition: opacity 0.35s, transform 0.35s;
+          width: 250px;
+          z-index: -1; }
+        html body#about #members section h4, html body#about #members section p {
+          opacity: 0;
+          padding: 0 12%;
+          transform: scale(0);
+          transition: opacity 0.35s, transform 0.35s; }
+        html body#about #members section h4 {
+          font-size: 1.2em;
+          font-weight: 400;
+          line-height: 2.2em;
+          margin: 0; }
+          html body#about #members section h4:after {
+            background: #fff;
+            content: '';
+            display: block;
+            height: 2px;
+            width: 25px; }
+        html body#about #members section p {
+          font-size: 1em;
+          font-style: italic;
+          line-height: 1.2em;
+          padding-bottom: 20px; }
+        html body#about #members section img {
+          left: 0;
+          position: absolute;
+          top: 0;
+          width: 300px;
+          z-index: -1; }
+        html body#about #members section:hover:after, html body#about #members section:hover h4, html body#about #members section:hover p, html body#about #members section:focus:after, html body#about #members section:focus h4, html body#about #members section:focus p {
+          opacity: 1;
+          transform: scale(1); }
+        @media screen and (min-width: 1200px) {
+          html body#about #members section:nth-of-type(2), html body#about #members section:nth-of-type(3), html body#about #members section:nth-of-type(14) {
+            padding-right: 300px; }
+          html body#about #members section:nth-of-type(10), html body#about #members section:nth-of-type(11) {
+            margin-left: 300px; }
+          html body#about #members section:nth-of-type(10):before, html body#about #members section:nth-of-type(3):before, html body#about #members section:nth-of-type(14):before {
+            content: '';
+            height: 300px;
+            position: absolute;
+            width: 300px; }
+          html body#about #members section:nth-of-type(10):before {
+            background: #1a2530;
+            left: -300px;
+            top: 0; }
+          html body#about #members section:nth-of-type(3):before, html body#about #members section:nth-of-type(14):before {
+            background: #476583;
+            right: 0;
+            top: 0; }
+          html body#about #members section:nth-of-type(14):before {
+            background: #1a2530; } }
+    html body#about #tools {
+      justify-content: flex-end; }
+      html body#about #tools h3 {
+        display: none; }
+      html body#about #tools ul {
+        width: 50%;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0; }
+        html body#about #tools ul li {
+          box-shadow: 1px 1px 0px #e0e0e0;
+          border-left: 1px solid #e0e0e0;
+          box-sizing: border-box; }
+          html body#about #tools ul li:nth-child(-n+2) {
+            border-top: 1px solid #e0e0e0; }
+          html body#about #tools ul li#soda {
+            background: url(images/icones/soda.svg) no-repeat center 40px;
+            background-size: 30%; }
+          html body#about #tools ul li#sport {
+            background: url(images/icones/sport.svg) no-repeat center 40px;
+            background-size: 30%; }
+          html body#about #tools ul li#babyfoot {
+            background: url(images/icones/babyfoot.svg) no-repeat center 40px;
+            background-size: 30%; }
+          html body#about #tools ul li#popcorn {
+            background: url(images/icones/popcorn.svg) no-repeat center 40px;
+            background-size: 30%; }
+          html body#about #tools ul li strong {
+            margin-top: 120px; }
+            html body#about #tools ul li strong:before {
+              background: #1c1c1c; }
+    html body#activity #digital, html body#activity #pharminfo, html body#activity #medsite, html body#activity #backflip, html body#activity #advertisement, html body#activity #solutions, html body#activity #expert {
+      width: 50%; }
+    html body#activity #digital, html body#activity #professionnals, html body#activity #advice, html body#activity #project, html body#activity #work, html body#activity #free, html body#activity #share {
+      width: 33%; }
+    html body#activity #teepy {
+      width: 25%; }
+    html body#activity #pharminfo h3, html body#activity #medsite h3, html body#activity #teepy h3, html body#activity #backflip h3 {
+      font-size: 0; }
+      html body#activity #pharminfo h3:before, html body#activity #medsite h3:before, html body#activity #teepy h3:before, html body#activity #backflip h3:before {
+        display: block;
+        content: ''; }
+    html body#activity section {
+      box-sizing: border-box; }
+      html body#activity section#platform {
+        margin-top: 0; }
+    html body#activity #platform {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      position: relative; }
+      html body#activity #platform h2 {
+        position: absolute;
+        top: 230px;
+        right: -40px;
+        z-index: -1; }
+      html body#activity #platform:before {
+        content: url(images/photos/platform.jpg);
+        position: absolute;
+        top: 0;
+        left: 25%;
+        z-index: -2; }
+      html body#activity #platform #digital {
+        order: -2;
+        margin-left: 17%;
+        margin-top: 150px;
+        position: relative; }
+        html body#activity #platform #digital:before {
+          content: url(images/logos/kozea-platform.svg);
+          width: 150px;
+          display: block;
+          position: absolute;
+          top: -70px;
+          left: -65px; }
+      html body#activity #platform #pharminfo {
+        margin-left: 50%;
+        margin-top: -150px; }
+        html body#activity #platform #pharminfo h3:before {
+          background: url(images/logos/logo-pharminfo.svg) no-repeat;
+          height: 50px; }
+      html body#activity #platform #medsite h3:before {
+        background: url(images/logos/medsite.svg) no-repeat;
+        height: 30px; }
+      html body#activity #platform #professionnals {
+        margin-right: 17%;
+        align-self: flex-start; }
+      html body#activity #platform #teepy {
+        margin-left: 25%; }
+        html body#activity #platform #teepy h3:before {
+          background: red;
+          height: 50px; }
+    html body#activity #link {
+      position: relative; }
+      html body#activity #link h2 {
+        position: absolute;
+        top: -120px;
+        left: -70px; }
+      html body#activity #link #advice {
+        align-self: flex-start;
+        margin-left: 17%;
+        position: relative; }
+        html body#activity #link #advice:before {
+          content: url(images/logos/kozea-link.svg);
+          width: 150px;
+          display: block;
+          position: absolute;
+          top: -140px;
+          right: -160px; }
+        html body#activity #link #advice:after {
+          content: url(images/photos/link.jpg);
+          position: absolute;
+          z-index: -1;
+          top: -70px;
+          left: 100%; }
+      html body#activity #link #project {
+        align-self: flex-end;
+        margin-right: 17%; }
+      html body#activity #link #backflip {
+        align-self: flex-start;
+        margin-top: -267px; }
+        html body#activity #link #backflip h3:before {
+          background: red;
+          height: 50px; }
+    html body#activity #media {
+      position: relative;
+      margin-top: 12%; }
+      html body#activity #media h2 {
+        position: absolute;
+        z-index: -2;
+        top: -130px;
+        right: 0; }
+      html body#activity #media #advertisement {
+        align-self: flex-end;
+        position: relative; }
+        html body#activity #media #advertisement:after {
+          content: url(images/photos/media.jpg);
+          position: absolute;
+          top: -120px;
+          left: -67%;
+          z-index: -2; }
+      html body#activity #media #work {
+        margin-left: 33%; }
+        html body#activity #media #work p strong {
+          color: #fff; }
+      html body#activity #media #solutions {
+        align-self: flex-start;
+        margin-top: -315px; }
+    html body#activity #community {
+      align-items: flex-start;
+      position: relative;
+      margin-top: 8%; }
+      html body#activity #community h2 {
+        position: absolute;
+        top: -90px;
+        right: 0;
+        z-index: -2; }
+      html body#activity #community #free {
+        margin-left: 17%;
+        position: relative; }
+        html body#activity #community #free:before {
+          content: url(images/logos/kozea-community.svg);
+          width: 150px;
+          position: absolute;
+          top: -70px;
+          left: 0; }
+        html body#activity #community #free:after {
+          content: url(images/photos/community.jpg);
+          position: absolute;
+          z-index: -1;
+          top: 30px;
+          left: 87%; }
+      html body#activity #community #projects {
+        padding: 0;
+        margin-left: 25%; }
+        html body#activity #community #projects ul {
+          display: flex;
+          flex-wrap: wrap;
+          margin: 0; }
+          html body#activity #community #projects ul li a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 300px;
+            height: 300px;
+            color: #fff;
+            padding: 5%;
+            box-sizing: border-box;
+            text-align: center;
+            justify-content: center; }
+            html body#activity #community #projects ul li a strong {
+              text-transform: uppercase;
+              color: #fff; }
+            html body#activity #community #projects ul li a:before {
+              order: -2;
+              width: 90px; }
+            html body#activity #community #projects ul li a:after {
+              background: #fff;
+              content: '';
+              display: block;
+              height: 3px;
+              order: -1;
+              margin: 10px;
+              width: 20px; }
+          html body#activity #community #projects ul li#radicale a:before {
+            content: url(images/icones/radicale.svg); }
+          html body#activity #community #projects ul li#pygal a:before {
+            content: url(images/icones/pygal.svg); }
+          html body#activity #community #projects ul li#weasyprint a:before {
+            content: url(images/icones/weasyprint.svg); }
+      html body#activity #community #share {
+        margin-left: 50%;
+        margin-top: -15%; }
+    html body #skills {
+      max-width: inherit;
+      margin: 10% auto 0;
+      padding-bottom: 5%; }
+      html body #skills h2 {
+        margin-top: -10%; }
+      html body #skills ul {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: 600px;
+        padding-left: 0; }
+        html body #skills ul li {
+          align-items: center;
+          box-sizing: border-box;
+          display: flex;
+          flex-direction: column;
+          height: 270px;
+          padding: 20px 10px;
+          text-align: center;
+          width: 50%; }
+          html body #skills ul li:after {
+            background: #fff;
+            content: '';
+            height: 3px;
+            margin: 10px 0 20px;
+            order: -1;
+            width: 20px; }
+          html body #skills ul li:nth-of-type(3) {
+            margin-top: 60px; }
+          html body #skills ul li:before {
+            order: -2;
+            width: 90px; }
+          html body #skills ul li#targets:before {
+            content: url(images/icones/target.svg); }
+          html body #skills ul li#reactivity:before {
+            content: url(images/icones/reactivity.svg); }
+          html body #skills ul li#innovation:before {
+            content: url(images/icones/idea.svg); }
+          html body #skills ul li#r-and-d:before {
+            content: url(images/icones/search.svg); }
+    html body #goals ul {
+      display: flex;
+      width: 100%; }
+      html body #goals ul li {
+        align-items: center;
+        display: flex;
+        flex: 1 33%;
+        flex-direction: column;
+        text-align: center; }
+        html body #goals ul li:after {
+          background: #1a2530;
+          content: '';
+          display: block;
+          height: 3px;
+          order: -1;
+          margin: 10px;
+          width: 20px; }
+        html body #goals ul li:before {
+          order: -2;
+          width: 90px; }
+        html body #goals ul li#specialist:before {
+          content: url(images/icones/specialist.svg); }
+        html body #goals ul li#web-expert:before {
+          content: url(images/icones/webexpert.svg); }
+        html body #goals ul li#create-solutions:before {
+          content: url(images/icones/solutions.svg); }
+    html body#expertise #missions {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: center; }
+      html body#expertise #missions h2 {
+        flex: 1 100%; }
+      html body#expertise #missions section {
+        width: 50%;
+        box-sizing: border-box; }
+        html body#expertise #missions section:first-of-type {
+          position: relative;
+          margin-right: 50%; }
+          html body#expertise #missions section:first-of-type:after {
+            content: '';
+            display: block;
+            background: #1a2530;
+            height: 3px;
+            width: 60px;
+            position: absolute;
+            top: 60px;
+            right: -30px; }
+          html body#expertise #missions section:first-of-type img {
+            position: absolute;
+            top: 0;
+            right: -300px;
+            width: 250px; }
+        html body#expertise #missions section:nth-of-type(2) {
+          margin-top: -90px;
+          margin-left: 50%; }
+        html body#expertise #missions section:nth-of-type(3) {
+          width: 100%;
+          margin-right: 50%;
+          position: relative; }
+          html body#expertise #missions section:nth-of-type(3):after {
+            content: '';
+            height: 100%;
+            position: absolute;
+            width: 100%;
+            background: url(images/photos/brainstorm.jpg) no-repeat;
+            right: -100%;
+            top: 0; }
+        html body#expertise #missions section#big-data {
+          background: url(images/photos/big-data.jpg) no-repeat;
+          background-size: cover;
+          text-align: center; }
+    html body#legal h1:before {
+      content: '[ Mentions légales ]'; }
+    html body#legal h1:after {
+      content: none; }
+    html body#legal dl dt, html body#legal dl dd {
+      display: inline; }
+    html body#legal dl dt {
+      font-weight: 700; }
+      html body#legal dl dt:after {
+        content: ':';
+        display: inline; }
+    html body#legal dl dd {
+      margin-left: 0; }
+      html body#legal dl dd:after {
+        content: '';
+        display: block; }
+    html body #partners ul {
+      display: flex;
+      width: 100%; }
+      html body #partners ul li {
+        flex: 1 25%;
+        text-align: center; }
+        html body #partners ul li a {
+          height: 100px;
+          display: block;
+          font-size: 0; }
+        html body #partners ul li#france-ehealth-tech a {
+          background: url(images/marques/france-ehealth.jpg) no-repeat center center; }
+        html body #partners ul li#la-cuisine-du-web a {
+          background: url(images/marques/cuisineduweb.jpg) no-repeat center center; }
+        html body #partners ul li#minalogic a {
+          background: url(images/marques/minalogic.jpg) no-repeat center center; }
+        html body #partners ul li#i-care a {
+          background: url(images/marques/i-care.jpg) no-repeat center center; }
+    html body#references ul li a, html body #partners ul li a {
+      opacity: 0.75; }
+      html body#references ul li a:hover, html body #partners ul li a:hover {
+        opacity: 1; }
+    html body#references section ul {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center; }
+      html body#references section ul li {
+        padding: 40px 20px;
+        box-sizing: border-box;
+        width: 25%;
+        box-shadow: 1px 0px 0px #e0e0e0;
+        border-left: 1px solid #e0e0e0; }
+        html body#references section ul li a {
+          height: 100px;
+          display: block;
+          font-size: 0; }
+        html body#references section ul li#arrow a {
+          background: url(images/marques/arrow.jpg) no-repeat center center; }
+        html body#references section ul li#novartis a {
+          background: url(images/marques/novartis.jpg) no-repeat center center; }
+        html body#references section ul li#bailly a {
+          background: url(images/marques/bailly-creat.jpg) no-repeat center center; }
+        html body#references section ul li#septodont a {
+          background: url(images/marques/septodont.jpg) no-repeat center center; }
+        html body#references section ul li#sanofi a {
+          background: url(images/marques/sanofi.jpg) no-repeat center center; }
+        html body#references section ul li#mylan a {
+          background: url(images/marques/mylan.jpg) no-repeat center center; }
+        html body#references section ul li#safran a {
+          background: url(images/marques/safran.jpg) no-repeat center center; }
+        html body#references section ul li#lafarge a {
+          background: url(images/marques/lafarge.jpg) no-repeat center center; }
+        html body#references section ul li#airbus-helicopters a {
+          background: url(images/marques/airbus.jpg) no-repeat center center; }
+        html body#references section ul li#safetynetwork a {
+          background: url(images/marques/safety-network.jpg) no-repeat center center; }
+    html body #contact-us > dl {
+      background: #1a2530;
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0;
+      padding: 20px;
+      margin-right: 33%;
+      box-sizing: border-box;
+      width: 33%; }
+      html body #contact-us > dl > * {
+        color: #fff; }
+      html body #contact-us > dl dt:first-child, html body #contact-us > dl dt:first-child + dd {
+        width: 60%; }
+      html body #contact-us > dl dt:nth-of-type(2), html body #contact-us > dl dt:nth-of-type(2) + dd {
+        width: 40%; }
+      html body #contact-us > dl ul {
+        margin: 0; }
+        html body #contact-us > dl ul li {
+          font-size: 1em; }
+          html body #contact-us > dl ul li a {
+            color: #fff; }
+      html body #contact-us > dl dd {
+        margin-left: 0;
+        font-weight: 100; }
+      html body #contact-us > dl dt {
+        font-weight: 400;
+        order: -1;
+        padding-top: 10px; }
+    html body #contact-us form, html body #contact-us #map {
+      width: 50%; }
+    html body #contact-us #map {
+      background: red;
+      height: 500px;
+      margin-right: 50%;
+      margin-top: -365px;
+      z-index: -10; }
+    html body #contact-us form {
+      border-top: 2px solid #1a2530;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      margin-left: 50%;
+      padding: 30px;
+      margin-top: -70px; }
+      html body #contact-us form input:not(:last-child), html body #contact-us form textarea {
+        background: none;
+        border-top: none;
+        border-right: none;
+        border-bottom: 1px solid #e0e0e0;
+        border-left: none;
+        margin-bottom: 20px;
+        padding: 5px 10px; }
+        html body #contact-us form input:not(:last-child)[placeholder], html body #contact-us form textarea[placeholder] {
+          color: #1c1c1c;
+          font-size: 1em;
+          font-weight: 100; }
+      html body #contact-us form textarea {
+        height: 120px; }
+      html body #contact-us form input[type="submit"] {
+        background: #1a2530;
+        border: none;
+        box-shadow: none;
+        color: #fff;
+        font-size: 1em;
+        padding: 7px;
+        width: 20%; }
+        html body #contact-us form input[type="submit"]:hover {
+          background: #2c3f51; }
+    html body footer {
+      margin-top: 25px; }
+      html body footer dl {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0;
+        padding-bottom: 4px; }
+        html body footer dl > * {
+          border-left: 1px solid #e0e0e0;
+          box-sizing: border-box;
+          font-size: 0.8em;
+          padding-left: 1.5%;
+          width: 25%; }
+          html body footer dl > *:first-child, html body footer dl > *:first-child + dd {
+            border-left: none; }
+        html body footer dl dt {
+          color: #C1C8D0;
+          order: -1;
+          padding-top: 10px; }
+        html body footer dl dd {
+          margin-left: 0; }
+          html body footer dl dd:nth-of-type(3) ul {
+            display: flex;
+            flex-wrap: wrap; }
+            html body footer dl dd:nth-of-type(3) ul li {
+              width: 50%; }
+          html body footer dl dd:last-child ul {
+            display: flex; }
+            html body footer dl dd:last-child ul li:last-child:before {
+              content: '- '; }
+          html body footer dl dd ul {
+            margin-top: 0; }
+            html body footer dl dd ul li a:before, html body footer dl dd ul li a:after {
+              opacity: 0;
+              transition: transform 0.35s, opacity 0.2s;
+              display: inline-block; }
+            html body footer dl dd ul li a:before {
+              content: '[ ';
+              transform: translateX(20px);
+              margin-right: 5px; }
+            html body footer dl dd ul li a:after {
+              content: ' ]';
+              transform: translateX(-20px);
+              margin-left: 5px; }
+            html body footer dl dd ul li a:hover {
+              color: #69737c; }
+              html body footer dl dd ul li a:hover:before, html body footer dl dd ul li a:hover:after {
+                opacity: 1;
+                transform: translateX(0px); }
+
+/*# sourceMappingURL=style.scss.css.map */

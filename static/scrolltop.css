@@ -1,0 +1,19 @@
+#backToTop{
+    position: fixed;
+    display: none;
+    right: 70px;
+    bottom: 70px;
+    height: 50px;
+    width: 50px;
+    color: #ffffff;
+    background-color: #2a4056;
+    text-align: center;
+    cursor: pointer;
+    font-size: 35px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+#backToTop:hover{
+    background-color: #305274;
+}

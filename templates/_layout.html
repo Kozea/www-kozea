@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+{% set titles = [
+  ['index', 'Accueil'],
+  ['about', 'À propos'],
+  ['activity', 'Notre activité'],
+  ['expertise', 'Notre expertise'],
+  ['references', 'Nos références'],
+  ['contact', 'Contact'],
+] %}
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kozea - {{ dict(titles)[page] }} - L’innovation digitale au service des acteurs de la santé</title>
+    <link type="image/png" rel="icon" href="static/favicon.png" />
+    <link type="text/css" rel="stylesheet" href="static/style.scss.css" />
+    <link type="text/css" rel="stylesheet" href="static/scrolltop.css" />
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.2.js"></script>
+    <script type="text/javascript" src="static/js/kozea.js"></script>
+  </head>
+
+  <body id="{{ page }}">
+    <header>
+      <h1>{{ dict(titles)[page] }}</h1>
+    </header>
+
+    <nav>
+      <ul>
+        {% for id, title in titles %}
+          <li{% if id == page %} class="active"{% endif %}>
+            <a href="{{ url_for('page', page=id) }}">{{ title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
+
+    {% block body %}{% endblock body %}
+
+    <span id='backToTop'>&uarr;</span>
+    
+    <footer>
+      <dl>
+        <dt>Adresse</dt>
+        <dd>
+          107, boulevard de Stalingrad<br/>
+          69100<br/>
+          Villeurbanne
+        </dd>
+        <dt>Contact</dt>
+        <dd>
+          <ul>
+            <li><a href="tel://+33478841928">+33 4 78 84 19 28</a></li>
+            <li><a href="mailto://contact@kozea.fr">contact@kozea.fr</a></li>
+          </ul>
+        </dd>
+        <dt>Suivez-nous</dt>
+        <dd>
+          <ul>
+            <li id="facebook"><a href="{# TODO link #}">Facebook</a></li>
+            <li id="instagram"><a href="https://www.instagram.com/kozea/">Instagram</a></li>
+            <li id="twitter"><a href="{# TODO link #}">Twitter</a></li>
+            <li id="linkedin"><a href="{# TODO link #}">LinkedIn</a></li>
+            <li id="youtube"><a href="https://www.youtube.com/channel/UCx5VGRSsjpRWhc55EpI_gEw">Youtube</a></li>
+            <li id="github"><a href="https://github.com/Kozea">GitHub</a></li>
+          </ul>
+        </dd>
+        <dt>Crédits</dt>
+        <dd>
+          <ul>
+            <li><a href="{{ url_for('page', page='legal') }}">Mentions légales</a></li>
+            <li>Made by Kozea with ♥</li>
+          </ul>
+        </dd>
+      </dl>
+    </footer>
+  </body>
+</html>
